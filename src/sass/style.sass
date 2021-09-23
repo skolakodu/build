@@ -188,3 +188,28 @@ img
             font-size: 13px
         @media (max-width: 768px)
             font-size: 16px
+
+
+
+.modal
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(#000, .5)
+    display: none
+    &_active
+        display: flex
+    &-dialog
+        margin: auto
+        max-width: 450px
+        width: 90%
+        min-height: 200px
+        background-color: #fff
+        padding: 40px
+        position: relative
+        &__close
+            position: absolute
+            right: 0
+            top: 0
