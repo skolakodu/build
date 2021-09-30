@@ -34,6 +34,18 @@ img
     border-radius: 10px
     padding: 20px 25px
 
+.section-title
+    font-size: 30px
+    +bold
+    text-align: center
+    line-height: 45px
+
+.section-subtitle 
+    color: #000
+    font-size: 20px
+    text-align: center
+    display: block
+
 
 .header
     padding: 20px 0
@@ -189,6 +201,196 @@ img
         @media (max-width: 768px)
             font-size: 16px
 
+.portfolio
+    padding: 100px 0
+    background: $grey url('../img/portfolio-bg.png') left repeat-y
+    background-size: 50%
+    &__title
+        margin-bottom: 100px
+        color: $accent
+    &__arrows
+        max-width: 120px
+        display: flex
+        justify-content: space-between
+        margin: auto
+        margin-top: 70px
+
+.arrows__left, .arrows__right
+    cursor: pointer
+
+.slider
+    &__image
+        margin: auto
+
+
+
+.price
+    padding: 100px 0
+    &__title
+        margin-bottom: 60px
+    &__subtitle
+        margin-bottom: 60px
+    &__card
+        margin-bottom: 30px
+
+
+.cards
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+.card
+    text-align: center
+    border: 1px solid $border-card
+    transition: .2s
+    &:hover
+        box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1)
+        .card__image::before
+            opacity: 1
+    &__text
+        padding: 40px
+    &__title
+        margin-top: 0
+    &__image
+        position: relative
+        img
+            display: block
+        &::before
+            content: ''
+            position: absolute
+            left: 0
+            top: 0
+            width: 100%
+            height: 100%
+            background-image: linear-gradient(to top, #ffd200 0%, rgba(255, 255, 255, 0) 100%)
+            opacity: 0
+            transition: .2s
+    &__title
+        font-size: 18px
+        color: #000
+        margin-bottom: 30px
+    &__link
+        display: inline-block
+        +bold
+        text-decoration: none
+        color: $accent
+        position: relative
+        &:hover
+            &::after
+                height: 13px
+        &::after
+            content: ''
+            display: block
+            position: absolute
+            z-index: -1
+            bottom: -4px
+            left: 0
+            width: 100%
+            height: 3px
+            background-color: $main-color
+            transition: .2s
+
+.steps
+    padding-bottom: 120px
+    &__title
+        margin-bottom: 60px
+    &__subtitle
+        margin-bottom: 75px
+
+.icons
+    display: flex
+    justify-content: space-between
+
+.icon
+    text-align: center
+    position: relative
+    &:last-child
+        &::after
+            display: none
+    &::after
+        content: ''
+        position: absolute
+        top: -10px
+        right: -95px
+        display: block
+        width: 72px
+        height: 25px
+        background-image: url('../img/iconArrowRight.png')
+    &__image
+        width: 100px
+        height: 100px
+        margin: auto
+        border: 3px solid #ffd200
+        background-color: #fff
+        border-radius: 100px
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 30px
+        img
+            width: 30px
+            height: 30px
+            display: inline-block
+    &__text
+        max-width: 140px
+        display: inline-block
+        font-size: 14px
+        line-height: 20px
+
+
+.notice
+    background-color: $secondary
+    padding: 100px 0
+    &__text
+        text-align: center
+        font-size: 32px
+        max-width: 750px
+        margin: auto
+        line-height: 50px
+        font-weight: 300
+
+
+.info
+    padding: 100px 0
+    &__block
+        margin-bottom: 150px
+
+
+.benefits
+    display: flex
+    justify-content: space-between
+
+.benefit 
+    background-color: $benefit-bg
+    height: 410px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    max-width: 370px
+    position: relative
+    &__image
+        position: absolute
+        bottom: 0
+        left: 0
+    &__text
+        margin: 26px 80px 0 26px
+        font-size: 16px
+        line-height: 23px
+        strong
+            +bold
+
+
+.documents__title
+    margin-bottom: 100px
+
+.documents-block
+    display: flex
+    justify-content: space-between
+    &__text
+        text-align: center
+        margin-top: 40px
+        line-height: 24px
+        font-size: 18px
 
 
 .modal
